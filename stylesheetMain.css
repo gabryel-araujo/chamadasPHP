@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+main {
+  padding: 0.75rem;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+aside {
+  width: 250px; /* Reduzindo a largura */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  gap: 1rem;
+}
+
+.buttonArea,
+.selectedButtonArea {
+  width: 100%;
+  height: 60px; /* Ajustando altura */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.buttonArea:hover {
+  cursor: pointer;
+  background-color: #d0f7e6;
+}
+
+.selectedButtonArea:hover {
+  cursor: pointer;
+  background-color: #d0f7e6;
+}
+
+.buttonArea {
+  background-color: #f2f2f2;
+}
+
+.selectedButtonArea {
+  background-color: #9ff8d1;
+}
+
+.upperSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Reduzindo o espaçamento */
+}
+
+.informativeField {
+  display: flex;
+  flex-direction: column;
+  background-color: #9ff8d1;
+  width: 300px; /* Reduzindo largura */
+  height: 85px; /* Ajustando altura */
+  border-radius: 0.5rem;
+  padding: 0.75rem; /* Reduzindo padding */
+  gap: 0.5rem; /* Reduzindo o gap interno */
+}
+
+.number {
+  font-size: x-large; /* Ajustando tamanho da fonte */
+  margin: 0;
+}
+
+.informativeNumber {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 2.75rem; /* Diminuindo o espaçamento entre os campos */
+}
+
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.labelText {
+  font-size: 0.875rem; /* Tamanho de fonte menor */
+  color: #595959;
+}
+
+.divCentral {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.divMedicos {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+}
+
+.teste {
+  color: red;
+}
