@@ -30,3 +30,23 @@
     </div>
   </div>
 </div>
+
+<?php 
+
+function resetSenhasDiario() { // Resetar as senhas diariamente
+  global $pdo;
+
+  $hora_atual = date('H:i:s');
+  $query = "SELECT hora_reset FROM configuracao LIMIT 1";
+  $stmt = $pdo->prepare($query);
+  $stmt->execute();
+  $config = $stmt->fetch();
+
+  if ($hora_atual >= $config['hora_reset']) {
+      // Limpa as senhas
+      $query = "DELETE FROM senhas";
+      $pdo->prepare($query)->execute();
+  }
+}
+
+?>
