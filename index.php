@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,9 @@
 <body>
 
     <h2>Gerar senhas de atendimento</h2>
+
+    <!-- Receber a mensagem de erro do JavaScript -->
+    <span id="msgAlerta"></span>
 
     <!--Chamar a função "gerarSenha" do javascript para gerar senha de atendimento convencional -->
     <p><button type="button" onclick="gerarSenha(1)">Convencional</button></p>
