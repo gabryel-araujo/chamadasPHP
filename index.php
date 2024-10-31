@@ -10,8 +10,11 @@
 
     <h2>Gerar senhas de atendimento</h2>
 
-    <!-- Receber a mensagem de erro do JavaScript -->
+    <!-- Recebe a mensagem de erro do JavaScript -->
     <span id="msgAlerta"></span>
+
+    <!-- Recebe a senha do JavaScript -->
+    <p>Senha: <span id="senhaGerada"></span></p>
 
     <!--Chamar a função "gerarSenha" do javascript para gerar senha de atendimento convencional -->
     <p><button type="button" onclick="gerarSenha(1)">Convencional</button></p>

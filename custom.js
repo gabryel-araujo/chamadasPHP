@@ -5,13 +5,17 @@ async function gerarSenha(tipoSenha) {
 
     //ler os dados retornado pelo PHP
     const resposta = await dados.json();
-    console.log(resposta);
+    //console.log(resposta);
 
     //Acessar o if quando houver erro no arquivo "gerar_senha.php"
-    if(resposta['status']){
-        //Enviar a mensagem de erro para o SELETOR "msgAlerta""
+    if(!resposta['status']){
+        //Enviar a mensagem de erro para o SELETOR "msgAlerta"
         document.getElementById("msgAlerta").innerHTML = resposta['msg'];
+
+        //Apagar a senha gerada anteriormente
+        document.getElementById("senhaGerada").innerHTML = "";
     } else {
-        document.getElementById("msgAlerta").innerHTML = resposta['msg'];
+        //Enviar a senha gerada para o SELETOR "senhaGerada"
+        document.getElementById("senhaGerada").innerHTML = resposta['nome_senha'];
     }
 }

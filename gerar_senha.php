@@ -34,16 +34,41 @@ if(!empty($tipo)) {
         //Extrair para imprimir atraves da chave no array
         extract($row_senha);
 
+        //Criar a QUERY cadastrar a senhas gerada
+        $query_senha_gerada = "INSERT INTO senhas_geradas (senha_id, sits_senha_id, created) VALUE($id, 2, NOW())";
 
-        $retorno = ['status' => false, 'msg' => "<p style='color: green;'>Senha Gerada!</p>"];
+        //Prepara Query
+        $query_senha_gerada = $conn->prepare($query_senha_gerada);
+
+        //Executar a Query
+        $query_senha_gerada->execute();
+
+        //Verficar se foi cadastrado com seucesso
+        if($query_senha_gerada->rowCount()) {
+
+            //Alterar o status da senha "para nao ser utilizada mais de uma vez"
+            $query_edit_senha = "UPDATE senha SET sits_senha_id=2 WHERE id=$id LIMIT 1";
+
+            //Preparar a query
+            $edit_senha = $conn->prepare($query_edit_senha);
+
+            //Executar a query "update"
+            $edit_senha->execute();
+
+            //cria o array posicao indicando que não houve erro e a mensagem de erro e retorna a senha gerada
+            $retorno = ['status' => true, 'nome_senha' => "<span style='color: green;'>$nome_senha</span>"];
+        } else {
+            //cria o array posicao indicando que houve erro e a mensagem de erro
+            $retorno = ['status' => false, 'msg' => "<p style='color: #f00;'>Erro: Senha não gerada!</p>"];
+        }
     } else {
-    //cria o array posicao indicando que houve erro e a mensagem de erro
-        $retorno = ['status' => true, 'msg' => "<p style='color: #f00;'>Erro: Senhas Esgotadas!</p>"];
+        //cria o array posicao indicando que houve erro e a mensagem de erro
+        $retorno = ['status' => false, 'msg' => "<p style='color: #f00;'>Erro: Senhas Esgotadas!</p>"];
     }
 
 } else {
     //cria o array posicao indicando que houve erro e a mensagem de erro
-    $retorno = ['status' => true, 'msg' => "<p style='color: #f00;'>Erro: Senha não gerada!</p>"];
+    $retorno = ['status' => false, 'msg' => "<p style='color: #f00;'>Erro: Senha não gerada!</p>"];
 }
 
 //retorna os dados para o JavaScript
