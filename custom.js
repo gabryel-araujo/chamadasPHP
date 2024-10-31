@@ -17,5 +17,7 @@ async function gerarSenha(tipoSenha) {
     } else {
         //Enviar a senha gerada para o SELETOR "senhaGerada"
         document.getElementById("senhaGerada").innerHTML = resposta['nome_senha'];
+        //Apagar a mensagem de erro caso exista
+        document.getElementById("msgAlerta").innerHTML = "";
     }
 }
