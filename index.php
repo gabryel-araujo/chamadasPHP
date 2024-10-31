@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <script
     src="https://kit.fontawesome.com/f1952cfd14.js"
