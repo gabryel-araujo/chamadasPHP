@@ -7,7 +7,7 @@ include_once './conexao.php';
 $tipo = filter_input(INPUT_GET, 'tipo', FILTER_SANITIZE_NUMBER_INT);
 
 //verifica se vem o tipo de senha que deve ser gerada
-if(!empty($tipo)) {
+if (!empty($tipo)) {
     //criar QUERY para recuperar os registros do BD
     $query_senha = "SELECT id, nome_senha
                     FROM senha
@@ -16,7 +16,7 @@ if(!empty($tipo)) {
                     ORDER BY id ASC
                     LIMIT 1";
     //preparando a query
-    $result_senha = $conn ->prepare($query_senha);
+    $result_senha = $conn->prepare($query_senha);
 
     //substituir o link pelo valor
     $result_senha->bindValue(':sits_senha_id', 1, PDO::PARAM_INT);
@@ -26,7 +26,7 @@ if(!empty($tipo)) {
     $result_senha->execute();
 
     //verificar se encontrou encontrou algum registro no BD
-    if(($result_senha) and ($result_senha->rowCount() != 0)) {
+    if (($result_senha) and ($result_senha->rowCount() != 0)) {
 
         //Ler as informacoes retornadas do Banco de Dados
         $row_senha = $result_senha->fetch(PDO::FETCH_ASSOC);
@@ -44,7 +44,7 @@ if(!empty($tipo)) {
         $query_senha_gerada->execute();
 
         //Verficar se foi cadastrado com seucesso
-        if($query_senha_gerada->rowCount()) {
+        if ($query_senha_gerada->rowCount()) {
 
             //Alterar o status da senha "para nao ser utilizada mais de uma vez"
             $query_edit_senha = "UPDATE senha SET sits_senha_id=2 WHERE id=$id LIMIT 1";
@@ -56,21 +56,19 @@ if(!empty($tipo)) {
             $edit_senha->execute();
 
             //cria o array posicao indicando que não houve erro e a mensagem de erro e retorna a senha gerada
-            $retorno = ['status' => true, 'nome_senha' => "<span style='color: green;'>$nome_senha</span>"];
+            $retorno = ['status' => true, 'nome_senha' => $nome_senha];
         } else {
             //cria o array posicao indicando que houve erro e a mensagem de erro
-            $retorno = ['status' => false, 'msg' => "<p style='color: #f00;'>Erro: Senha não gerada!</p>"];
+            $retorno = ['status' => false, 'msg' => "Senha não gerada!"];
         }
     } else {
         //cria o array posicao indicando que houve erro e a mensagem de erro
-        $retorno = ['status' => false, 'msg' => "<p style='color: #f00;'>Erro: Senhas Esgotadas!</p>"];
+        $retorno = ['status' => false, 'msg' => "Senhas Esgotadas!"];
     }
-
 } else {
     //cria o array posicao indicando que houve erro e a mensagem de erro
-    $retorno = ['status' => false, 'msg' => "<p style='color: #f00;'>Erro: Senha não gerada!</p>"];
+    $retorno = ['status' => false, 'msg' => "Senha não gerada!"];
 }
 
 //retorna os dados para o JavaScript
 echo json_encode($retorno);
-?>

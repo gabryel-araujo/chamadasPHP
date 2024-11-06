@@ -164,12 +164,50 @@ button {
 .divConvencional {
   width: 50%;
   border-right: 1px solid black;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
 .divPreferencial {
   width: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
 .underline {
   text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
+  grid-template-rows: repeat(4, 1fr); /* Define 4 linhas */
+  gap: 1rem; /* Espaçamento entre os itens */
+  padding: 10px; /* Padding dentro do grid */
+}
+
+.grid-item-convencional {
+  background-color: #d9ebfc;
+  border-radius: 1rem;
+  font-size: larger;
+  width: 150px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item-preferencial {
+  background-color: #ffddc6;
+  border-radius: 1rem;
+  font-size: larger;
+  width: 150px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

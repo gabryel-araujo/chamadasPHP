@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <script
     src="https://kit.fontawesome.com/f1952cfd14.js"
@@ -16,11 +17,15 @@
     <div class="divCentral">
       <?php include 'chamadas.php' ?>
       <div class="card flex ">
-        <div class="divConvencional flex justify-center">
+        <div class="divConvencional flex justify-center column">
           <h2 class="underline">Convencional</h2>
+          <div class="grid" id="gridConvencional">
+          </div>
         </div>
-        <div class="divPreferencial flex justify-center">
+        <div class="divPreferencial flex justify-center column">
           <h2 class="underline">Preferencial</h2>
+          <div class="grid" id="gridPreferencial">
+          </div>
         </div>
       </div>
 
