@@ -16,7 +16,7 @@
         <p class="labelText">Convencional</p>
       </div>
       <div class="informativeNumber">
-        <p class="number" id="qtdConvencional">10</p>
+        <p class="number" id="qtdConvencional">0</p>
       </div>
     </div>
     <div class="informativeField">
@@ -25,15 +25,16 @@
         <p class="labelText">Preferencial</p>
       </div>
       <div class="informativeNumber">
-        <p class="number" id="qtdPreferencial">20</p>
+        <p class="number" id="qtdPreferencial">0</p>
       </div>
     </div>
   </div>
 </div>
 
-<?php 
+<?php
 
-function resetSenhasDiario() { // Resetar as senhas diariamente
+function resetSenhasDiario()
+{ // Resetar as senhas diariamente
   global $pdo;
 
   $hora_atual = date('H:i:s');
@@ -43,9 +44,9 @@ function resetSenhasDiario() { // Resetar as senhas diariamente
   $config = $stmt->fetch();
 
   if ($hora_atual >= $config['hora_reset']) {
-      // Limpa as senhas
-      $query = "DELETE FROM senhas";
-      $pdo->prepare($query)->execute();
+    // Limpa as senhas
+    $query = "DELETE FROM senhas";
+    $pdo->prepare($query)->execute();
   }
 }
 

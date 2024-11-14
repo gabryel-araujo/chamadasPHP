@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 async function fetchSenhas() {
   try {
     const response = await fetch("exibir_senha.php");
-    const data = await response.json(); // Espera pelo JSON aqui
+    const data = await response.json();
     console.log(data); // Mostra os dados no console para verificar
 
     convencionais = data.filter((senha) => senha.tipos_senha_id == 1);
@@ -28,17 +28,17 @@ async function fetchSenhas() {
   }
 }
 
-fetchSenhas();
+setInterval(fetchSenhas, 1000);
 
 function atualizarTela() {
-  // Supondo que você tenha elementos HTML para mostrar as senhas
-  // Aqui você pode atualizar a interface, como incrementar a quantidade ou exibir as senhas
   console.log("Convencionais:", convencionais);
   console.log("Preferenciais:", preferenciais);
 
-  // Atualizar algum elemento na interface (exemplo)
   document.getElementById("qtdConvencional").innerText = convencionais.length;
   document.getElementById("qtdPreferencial").innerText = preferenciais.length;
+
+  gridConvencional.innerHTML = "";
+  gridPreferencial.innerHTML = "";
 
   convencionais
     .slice(0, 8)
@@ -60,17 +60,15 @@ function atualizarTela() {
 }
 
 async function decrementarConvencional() {
-  let totalConvencional = parseInt(qtdConvencional.innerText);
-
-  totalConvencional -= 1;
-
-  qtdConvencional.innerText = totalConvencional;
+  const response = await fetch(
+    `atender_senha.php?senha=${convencionais[0].nome_senha}`
+  );
+  fetchSenhas();
 }
 
-function decrementarPreferencial() {
-  let totalPreferencial = parseInt(qtdPreferencial.innerText);
-
-  totalPreferencial -= 1;
-
-  qtdPreferencial.innerText = totalPreferencial;
+async function decrementarPreferencial() {
+  const response = await fetch(
+    `atender_senha.php?senha=${preferenciais[0].nome_senha}`
+  );
+  fetchSenhas();
 }
