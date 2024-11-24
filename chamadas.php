@@ -3,51 +3,30 @@
   <div class="row">
     <div class="informativeField">
       <div>
-        <p>Atendidos</p>
-        <p class="labelText">Total</p>
+        <p class="text-white">Atendidos</p>
+        <p class="text-slate-300">Total</p>
       </div>
       <div class="informativeNumber">
-        <p class="number" id="total">0</p>
+        <p class="text-white text-xl" id="total">0</p>
       </div>
     </div>
     <div class="informativeField">
       <div>
-        <p>Aguardando</p>
-        <p class="labelText">Convencional</p>
+        <p class="text-white">Aguardando</p>
+        <p class="text-slate-300">Convencional</p>
       </div>
       <div class="informativeNumber">
-        <p class="number" id="qtdConvencional">0</p>
+        <p class="text-white text-xl" id="qtdConvencional">0</p>
       </div>
     </div>
     <div class="informativeField">
       <div>
-        <p>Aguardando</p>
-        <p class="labelText">Preferencial</p>
+        <p class="text-white">Aguardando</p>
+        <p class="text-slate-300">Preferencial</p>
       </div>
       <div class="informativeNumber">
-        <p class="number" id="qtdPreferencial">0</p>
+        <p class="text-white text-xl" id="qtdPreferencial">0</p>
       </div>
     </div>
   </div>
 </div>
-
-<?php
-
-function resetSenhasDiario()
-{ // Resetar as senhas diariamente
-  global $pdo;
-
-  $hora_atual = date('H:i:s');
-  $query = "SELECT hora_reset FROM configuracao LIMIT 1";
-  $stmt = $pdo->prepare($query);
-  $stmt->execute();
-  $config = $stmt->fetch();
-
-  if ($hora_atual >= $config['hora_reset']) {
-    // Limpa as senhas
-    $query = "DELETE FROM senhas";
-    $pdo->prepare($query)->execute();
-  }
-}
-
-?>

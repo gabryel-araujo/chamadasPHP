@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheetMain.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Projeto</title>
 </head>
 
@@ -16,7 +17,7 @@
     <?php include 'aside.php'; ?>
     <div class="divCentral">
       <?php include 'chamadas.php' ?>
-      <div class="card flex ">
+      <div class="card flex shadow-md">
         <div class="divConvencional flex justify-center column">
           <h2 class="underline">Convencional</h2>
           <div class="grid" id="gridConvencional">
@@ -29,10 +30,25 @@
         </div>
       </div>
 
-      <div class="flex justify-center items-center gap-3">
-        <button class="convencionalButton" id="convencionalButton" onclick="decrementarConvencional()">Convencional</button>
-        <button class="preferencialButton" id="preferencialButton" onclick="decrementarPreferencial()">Preferencial</button>
+      <div class="flex flex-col items-center">
+        <p class="mb-2 font-semibold text-lg">Realizar Chamada:</p>
+        <div class="flex gap-3 justify-between">
+          <button
+            class="bg-green-400 shadow-md h-16 rounded-md w-48 hover:cursor-pointer hover:bg-green-300 ease-in duration-300"
+            id="convencionalButton"
+            onclick="decrementarConvencional()">
+            Convencional
+          </button>
+          <button
+            class="bg-red-400 shadow-md h-16 rounded-md w-48 hover:cursor-pointer hover:bg-red-300 ease-in duration-300"
+            id="preferencialButton"
+            onclick="decrementarPreferencial()">
+            Preferencial
+          </button>
+        </div>
       </div>
+
+    </div>
     </div>
   </main>
   <script src="main.js"></script>

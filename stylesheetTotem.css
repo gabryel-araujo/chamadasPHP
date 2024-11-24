@@ -20,7 +20,8 @@ body {
 
 .navBar {
   background-color: #9ff8d1;
-  height: auto; /* defina a altura desejada da barra de navegação */
+  height: auto; /* altura padrão da barra de navegação */
+  padding: 0.5rem; /* adiciona espaçamento interno */
 }
 
 .navItems {

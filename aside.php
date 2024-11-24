@@ -3,10 +3,10 @@
 $page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 ?>
 
-<aside>
-  <img src="Queue-bro.png" alt="imagem de fila">
+<aside class="shadow-md">
+  <img src="Ticket-White.png">
   <div class="<?= $page == 'dashboard' ? 'selectedButtonArea' : 'buttonArea' ?>">
-    <i class="fa-solid fa-chart-simple"></i>
-    <p>Dashboard</p>
+    <i class="fa-solid fa-chart-simple text-white"></i>
+    <p class="text-white">Dashboard</p>
   </div>
 </aside>
