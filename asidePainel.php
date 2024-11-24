@@ -1,17 +1,15 @@
 <?php
-
-$page = isset($_GET['page']) ? $_GET['page'] : 'dashboard';
 ?>
 
-<aside>
-  <div class="horario">
-    <h1>12:30</h1>
+<aside class="shadow-md">
+  <div class="horario bg-sky-700">
+    <h1 id="hora" class="text-2xl text-white"></h1>
   </div>
 
   <div class="chamadas">
     <h3>Últimas chamadas:</h3>
-    <div class='grid-item-convencional'>C1</div>
-    <div class='grid-item-convencional'>C2</div>
-    <div class='grid-item-preferencial'>P1</div>
+    <div id="ultimosChamados">
+    </div>
   </div>
+  <img src="Ticket-White.png" width="60%">
 </aside>

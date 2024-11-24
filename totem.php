@@ -8,17 +8,16 @@
   <link rel="stylesheet" type="text/css" href="stylesheetTotem.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Gerar senha</title>
 </head>
 
 <body>
-  <nav class="navBar">
-    <div class="navItems">
-      <img src="Queue-bro.png" width="10%">
-      <div class="items">
-        <p class="buttonItems">Solicitar Senha</p>
-        <p class="buttonItems">Ajuda</p>
-      </div>
+  <nav class="bg-sky-700 flex items-center justify-between">
+    <img src="Ticket.png" width="8%" class="rounded-md">
+    <div class="flex gap-2 mr-8">
+      <p class="buttonItems text-white">Solicitar Senha</p>
+      <p class="buttonItems text-white">Ajuda</p>
     </div>
   </nav>
 
@@ -28,9 +27,9 @@
     <p id="msgAlerta"></p>
 
 
-    <div class="card">
-      <button class="convencionalButton button" onclick="gerarSenha(1)">Atendimento Convencional</button>
-      <button class="preferencialButton button" onclick="gerarSenha(2)">Atendimento Preferencial</button>
+    <div class="card shadow-md">
+      <button class="convencionalButton button shadow-md" onclick="gerarSenha(1)">Atendimento Convencional</button>
+      <button class="preferencialButton button shadow-md" onclick="gerarSenha(2)">Atendimento Preferencial</button>
     </div>
   </main>
   <script src="custom.js"></script>

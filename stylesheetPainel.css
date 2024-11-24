@@ -41,10 +41,6 @@ h1 {
   padding: 0;
 }
 
-img {
-  width: 100px;
-}
-
 button {
   width: 250px;
   height: 80px;
@@ -151,39 +147,7 @@ button {
   border-radius: 0.5rem;
 }
 
-.divMain {
-  display: flex;
-  gap: 0.25rem;
-  padding: 0.5rem;
-  width: 100%;
-}
-
-.chamados {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.previsao {
-  width: 50%;
-}
-
-.senhaChamada {
-  background-color: #d9ebfc;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.guiche {
-  background-color: #719ec9;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.img-noticia {
+  width: 40%;
+  border-radius: 0.4rem;
 }

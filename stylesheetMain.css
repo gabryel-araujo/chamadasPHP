@@ -45,15 +45,6 @@ img {
   width: 100px;
 }
 
-button {
-  width: 250px;
-  height: 80px;
-  border-radius: 15px;
-  border: none;
-  font-size: larger;
-  cursor: pointer;
-}
-
 .buttonArea,
 .selectedButtonArea {
   width: 100%;
@@ -67,41 +58,40 @@ button {
 
 .buttonArea:hover {
   cursor: pointer;
-  background-color: #d0f7e6;
+  background-color: #9ed3fc;
 }
 
 .selectedButtonArea:hover {
   cursor: pointer;
-  background-color: #d0f7e6;
+  background-color: #9ed3fc;
 }
 
 .buttonArea {
-  background-color: #f2f2f2;
+  background-color: #2269a1;
 }
 
 .selectedButtonArea {
-  background-color: #9ff8d1;
+  background-color: #2269a1;
 }
 
 .upperSection {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem; /* Reduzindo o espaçamento */
+  gap: 0.75rem;
 }
 
 .informativeField {
   display: flex;
   flex-direction: column;
-  background-color: #9ff8d1;
-  width: 300px; /* Reduzindo largura */
-  height: 85px; /* Ajustando altura */
+  background-color: #2269a1;
+  width: 300px;
+  height: 85px;
   border-radius: 0.5rem;
-  padding: 0.75rem; /* Reduzindo padding */
-  gap: 0.5rem; /* Reduzindo o gap interno */
+  padding: 0.75rem;
 }
 
 .number {
-  font-size: x-large; /* Ajustando tamanho da fonte */
+  font-size: x-large;
   margin: 0;
 }
 
@@ -114,11 +104,11 @@ button {
 .row {
   display: flex;
   align-items: center;
-  gap: 2.75rem; /* Diminuindo o espaçamento entre os campos */
+  gap: 2.75rem;
 }
 
 .labelText {
-  font-size: 0.875rem; /* Tamanho de fonte menor */
+  font-size: 0.875rem;
   color: #595959;
 }
 
@@ -135,14 +125,6 @@ button {
   background-color: white;
   border-radius: 0.5rem;
   padding: 0.75rem;
-}
-
-.preferencialButton {
-  background-color: #fd7171;
-}
-
-.convencionalButton {
-  background-color: #d3fd71;
 }
 
 .flex {
@@ -165,7 +147,7 @@ button {
   width: 50%;
   border-right: 1px solid black;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
   align-items: center;
   gap: 1rem;
 }
@@ -173,7 +155,7 @@ button {
 .divPreferencial {
   width: 50%;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-start !important;
   align-items: center;
   gap: 1rem;
 }
