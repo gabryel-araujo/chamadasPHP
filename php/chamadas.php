@@ -1,5 +1,8 @@
 <div class="upperSection">
-  <p>Main/Dashboard</p>
+  <section class="flex">
+    <p class="text-slate-400">Main/</p>
+    <p>Dashboard</p>
+  </section>
   <div class="row">
     <div class="informativeField">
       <div>
@@ -7,7 +10,7 @@
         <p class="text-slate-300">Total</p>
       </div>
       <div class="informativeNumber">
-        <p class="text-white text-xl" id="total">0</p>
+        <p class="text-white text-xl" id="totalAtendidos">0</p>
       </div>
     </div>
     <div class="informativeField">

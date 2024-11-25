@@ -11,5 +11,5 @@
     <div id="ultimosChamados">
     </div>
   </div>
-  <img src="Ticket-White.png" width="60%">
+  <img src="../assets/Ticket-White.png" width="60%">
 </aside>

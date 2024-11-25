@@ -16,7 +16,7 @@ setInterval(fetchHora, 500);
 fetchHora();
 
 const fecthNoticias = async () => {
-  const response = await fetch("noticias.json");
+  const response = await fetch("../js/noticias.json");
 
   const noticias = await response.json();
   return noticias;

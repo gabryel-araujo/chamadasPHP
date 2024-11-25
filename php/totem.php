@@ -5,16 +5,16 @@
   <script
     src="https://kit.fontawesome.com/f1952cfd14.js"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheetTotem.css" />
+  <link rel="stylesheet" type="text/css" href="../css/stylesheetTotem.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Gerar senha</title>
+  <title>Projeto PWEB</title>
 </head>
 
 <body>
   <nav class="bg-sky-700 flex items-center justify-between">
-    <img src="Ticket.png" width="8%" class="rounded-md">
+    <img src="../assets/Ticket.png" width="8%" class="rounded-md">
     <div class="flex gap-2 mr-8">
       <p class="buttonItems text-white">Solicitar Senha</p>
       <p class="buttonItems text-white">Ajuda</p>
@@ -32,7 +32,7 @@
       <button class="preferencialButton button shadow-md" onclick="gerarSenha(2)">Atendimento Preferencial</button>
     </div>
   </main>
-  <script src="custom.js"></script>
+  <script src="../js/custom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
