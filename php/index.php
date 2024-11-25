@@ -5,11 +5,11 @@
   <script
     src="https://kit.fontawesome.com/f1952cfd14.js"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheetMain.css" />
+  <link rel="stylesheet" type="text/css" href="../css/stylesheetMain.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Projeto</title>
+  <title>Projeto PWEB</title>
 </head>
 
 <body>
@@ -45,13 +45,15 @@
             onclick="decrementarPreferencial()">
             Preferencial
           </button>
+
+          <button class="hover:text-red-900 text-gray-400 hover:bg-red-200 ease-in duration-300 h-16 rounded-md w-48" onclick="resetarSenha()">Resetar senhas <i class="fa-solid fa-trash"></i></button>
         </div>
       </div>
-
     </div>
     </div>
   </main>
-  <script src="main.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

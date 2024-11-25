@@ -5,11 +5,11 @@
   <script
     src="https://kit.fontawesome.com/f1952cfd14.js"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheetPainel.css" />
+  <link rel="stylesheet" type="text/css" href="../css/stylesheetPainel.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>Projeto</title>
+  <title>Projeto PWEB</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
       <div class="card flex">
         <!-- topo da div -->
         <div class="topo bg-sky-700">
-          <img src="Ticket.png" width="5%" class="ml-2">
+          <img src="../assets/Ticket.png" width="5%" class="ml-2">
           <h1 class="text-2xl text-white">ATENDIMENTOS</h1>
         </div>
         <!-- corpo da div -->
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="w-1/2 flex flex-col justify-center items-center">
-            <img src="previsao.png" alt="previsao do tempo" class="w-96">
+            <img src="../assets/previsao.png" alt="previsao do tempo" class="w-96">
           </div>
         </div>
 
@@ -49,7 +49,7 @@
 
     </div>
   </main>
-  <script src="painel.js"></script>
+  <script src="../js/painel.js"></script>
 </body>
 
 </html>
