@@ -18,3 +18,12 @@ if ($result2->execute()) {
 } else {
   echo "Erro ao atualizar.";
 }
+
+$sql3 = "TRUNCATE TABLE senhas_atendidas";
+$result3 = $conn->prepare($sql3);
+
+if ($result3->execute()) {
+  echo "Atualização executada com sucesso";
+} else {
+  echo "Erro ao atualizar.";
+}
