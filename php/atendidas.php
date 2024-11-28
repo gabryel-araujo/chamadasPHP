@@ -1,7 +1,7 @@
 <?php
 include_once "./conexao.php";
 
-$query = "SELECT * FROM senha WHERE sits_senha_id = 3";
+$query = "SELECT s.nome_senha FROM senhas_atendidas sa JOIN senha s WHERE s.id = sa.id_senha ORDER BY sa.id ASC;";
 $result = $conn->prepare($query);
 
 $result->execute();
